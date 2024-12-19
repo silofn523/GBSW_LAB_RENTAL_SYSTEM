@@ -1,12 +1,12 @@
-import { Module } from "@nestjs/common";
-import { AppController } from "./app.controller";
-import { AppService } from "./app.service";
-import { ConfigurationModule } from "./configuration/configuration.module";
-import { UserModule } from "./user/user.module";
-import { LabModule } from "./lab/lab.module";
-import { AuthModule } from "./auth/auth.module";
-import { TypeOrmModule } from "@nestjs/typeorm";
-import { ConfigModule, ConfigService } from "@nestjs/config";
+import { Module } from '@nestjs/common'
+import { AppController } from './app.controller'
+import { AppService } from './app.service'
+import { ConfigurationModule } from './configuration/configuration.module'
+import { UserModule } from './user/user.module'
+import { LabModule } from './lab/lab.module'
+import { AuthModule } from './auth/auth.module'
+import { TypeOrmModule } from '@nestjs/typeorm'
+import { ConfigModule, ConfigService } from '@nestjs/config'
 
 @Module({
   imports: [
@@ -14,22 +14,22 @@ import { ConfigModule, ConfigService } from "@nestjs/config";
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({
-        type: "mysql",
-        host: config.get("DB_HOST"),
-        port: config.get("DB_PORT"),
-        username: config.get("DB_USERNAME"),
-        password: config.get("DB_PASSWORD"),
-        database: config.get("DB_SCHEMA"),
-        entities: [__dirname + "/**/*.entity{.ts,.js}"],
-        synchronize: config.get<boolean>("TYPEORM_SYBCHRONIZE"),
-      }),
+        type: 'postgres',
+        host: config.get('DB_HOST'),
+        port: config.get('DB_PORT'),
+        username: config.get('DB_USERNAME'),
+        password: config.get('DB_PASSWORD'),
+        database: config.get('DB_SCHEMA'),
+        entities: [__dirname + '/**/*.entity{.ts,.js}'],
+        synchronize: config.get<boolean>('TYPEORM_SYBCHRONIZE')
+      })
     }),
     ConfigurationModule,
     UserModule,
     LabModule,
-    AuthModule,
+    AuthModule
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService]
 })
 export class AppModule {}
