@@ -38,7 +38,7 @@
 | ------------- | ---------------------- | -------------------------- | ---------------- |
 | Desktop App | 성홍제 |<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=Vite&logoColor=white"/>  | 데스크톱의 프론트를 담당합니다. |
 | API | 성홍제, 이수환 |  <a href="https://nestjs.com/"><img src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=NestJS&logoColor=white"/></a>| 프로젝트에 필요한 서비스를 구현합니다. |
-| DBA | 이수환, 유진승  | <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/MySql-4479A1?style=flat-square&logo=MySql&logoColor=white"/></a> | 정보를 저장하기 위해 사용합니다. |
+| DBA | 김승환, 유진승  | <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/MySql-4479A1?style=flat-square&logo=MySql&logoColor=white"/></a> | 정보를 저장하기 위해 사용합니다. |
 | AWS | 유진승 | <img src="https://img.shields.io/badge/aws-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white"/> | 프로젝트를 배포하고 관리하기 위해 사용합니다. |
 
 ## Skills
